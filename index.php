@@ -6,11 +6,9 @@
             <div class="row cont justify-content-md-center aling align-items-center">
                 <div class="col-md-6 col-sm-12 justify-content-md-center aling align-items-center">
                     <form method="post" action="app/AuthController.php">
-
                         <h1 class="text-center">
-                            Iniciar Sesión
+                            Iniciar sesion
                         </h1>
-                        <p>Por favor, ingresa tu cuenta</p>
 
                         <div class="row mb-3">
                             <div class="input-group mb-3">
@@ -26,7 +24,7 @@
                         </div>
                         
                         <div class="form-check form-switch">
-                           
+                            <!-- aun no funciona jsjs -->
                             <input class="form-check-input" type="checkbox" id="flexSwitchCheckDisabled">
                             <label class="form-check-label" for="flexSwitchCheckDisabled">Recordar Usuario</label>
                         </div>

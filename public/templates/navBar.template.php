@@ -13,7 +13,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-dropbox"> Marcas</i>
+                            Marcas
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Marca 1</a></li>
@@ -29,23 +29,22 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-bookmarks">Categorías</i>
+                            Categorías
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Categoría 1</a></li>
-                            <li><a class="dropdown-item" href="#">Categoría 2</a></li>
-                            <li><a class="dropdown-item" href="#">Categoría 3</a></li>
-                            <li><a class="dropdown-item" href="#">Categoría 4</a></li>
-                            <li><a class="dropdown-item" href="#">Categoría 5</a></li>
+                            <li><a class="dropdown-item" href="#">Categoria 1</a></li>
+                            <li><a class="dropdown-item" href="#">Categoria 2</a></li>
+                            <li><a class="dropdown-item" href="#">Categoria 3</a></li>
+                            <li><a class="dropdown-item" href="#">Categoria 4</a></li>
+                            <li><a class="dropdown-item" href="#">Categoria 5</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Otras categorías</a></li>
+                            <li><a class="dropdown-item" href="#">Otras categorias</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                    
-                        <a class="nav-link"><i class="bi bi-x-square"></i>Cerrar Sesión</a>
+                        <a class="nav-link">Cerrar Sesión</a>
                     </li>
                 </ul>
             </div>

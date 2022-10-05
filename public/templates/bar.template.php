@@ -6,7 +6,6 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    
                     Marcas
                 </a>
                 <ul class="dropdown-menu">
@@ -18,7 +17,7 @@
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Otras marcas</a></li>
+                    <li><a class="dropdown-item" href="#"></a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
@@ -26,19 +25,19 @@
                     Categorías
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Categoría 1</a></li>
-                    <li><a class="dropdown-item" href="#">Categoría 2</a></li>
-                    <li><a class="dropdown-item" href="#">Categoría 3</a></li>
-                    <li><a class="dropdown-item" href="#">Categoría 4</a></li>
-                    <li><a class="dropdown-item" href="#">Categoría 5</a></li>
+                    <li><a class="dropdown-item" href="#">Categoria 1</a></li>
+                    <li><a class="dropdown-item" href="#">Categoria 2</a></li>
+                    <li><a class="dropdown-item" href="#">Categoria 3</a></li>
+                    <li><a class="dropdown-item" href="#">Categoria 4</a></li>
+                    <li><a class="dropdown-item" href="#">Categoria 5</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Otras categorías</a></li>
+                    <li><a class="dropdown-item" href="#"></a></li>
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link">Cerrar Sesión</a>
+                <a class="nav-link">Cerrar Sesion</a>
             </li>
         </ul>
     </div>
