@@ -6,7 +6,7 @@ function alerta(n) {
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: '<a class="dropdown-item" href="eliminar.php?idEliminar=' + n + '">Yes, delete it!</a>'
+        confirmButtonText: '<a class="dropdown-item" href="eliminar.php?idEliminar=' + n + '&action=delete">Yes, delete it!</a>'
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire(
@@ -25,6 +25,6 @@ function llenarDatos(datos) {
     document.getElementById('nameU').value = data[0];
     document.getElementById('descriptionU').value = data[1];
     document.getElementById('featuresU').value = data[2];
-    document.getElementById('brand_idU').value = data[3];
-    document.getElementById('objetivoId').value = data[4];
+    document.getElementById('numeral').value = data[4];
+
 };

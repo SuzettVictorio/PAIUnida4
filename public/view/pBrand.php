@@ -1,4 +1,4 @@
-<?php 
+<?php
     include '../../app/AuthController.php';
     include '../../app/BrandController.php';
     include '../../app/CategoryController.php';
@@ -8,8 +8,7 @@
     $categoriess = new CategoryController;
     $categories = $categoriess->getCategories();
 
-    $productos = $categoriess->getProducts($_GET['categoria']);
-
+    $productos = $brandss->getProducts($_GET['brand']);
     $user = new AuthController; 
     
     if($user->isLogin()){
@@ -27,12 +26,12 @@
                 <section>
                     <div class="row">
                         <div class="col">
-                            Categoría:
+                            Categoria:
                         </div>
                     </div>
                 </section>
                 <section>
-                <div class="row">
+                    <div class="row">
                         <?php if(isset($productos)){foreach($productos as $lista):
                             $srt = $lista->name.'||'.$lista->description.'||'.$lista->features.'||'.$lista->brand_id.'||'.$lista->id;
                             include '../../public/templates/productsWI.template.php';
@@ -40,14 +39,14 @@
                         ?>
                         
                         <div class="col bg-pink text-center">
-                             No hay stock de productos en esta categoría
+                           No hay productos en stock de esta categoría
                         </div>
                         
                         <?php
                         }?>
                     </div>
                 </section>
-                
+                <!-- Modal -->
                 <?php 
                 include '../templates/modal.template.php'
                 ?>

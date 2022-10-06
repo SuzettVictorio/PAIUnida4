@@ -1,12 +1,20 @@
 <?php 
-    include '../../app/productController.php';
+    include '../../app/AuthController.php';
     include '../../app/BrandController.php';
+    include '../../app/productController.php';
+    include '../../app/CategoryController.php';
+
+    
     $producto = new ProductosController;
     $productos = $producto->productos();
     $brandss = new BrandController;
     $marcas = $brandss->getBrands();
-    if(isset($_GET['delete'])){
-        $objt = strip_tags($_GET['delete']);
+    $categoriess = new CategoryController;
+    $categories = $categoriess->getCategories();
+    $user = new AuthController; 
+    
+    if($user->isLogin()){
+        header("Location:../../index.php");
     }
     include '../../public/templates/head.template.php'
 ?>
@@ -25,7 +33,7 @@
                             </label>
                         </div>
                         <div class="col">
-                            <button class="btn float-end btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">Añadir</button>
+                            <button class="btn float-end btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">Añadir Producto</button>
                         </div>
                     </div>
                 </section>
@@ -46,7 +54,7 @@
     </div>
     <!-- JavaScript Bundle with Popper -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/lot.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 
