@@ -1,8 +1,12 @@
 <?php
+include_once "config.php";
 
-session_start();
-if (isset($_POST["action"]) && isset($_POST["email"])) {
-    switch ($_POST["action"]) {
+
+if (isset($_POST['action']) && isset($_POST['email'])) {
+    
+    if(isset($_POST['super_token']) && $_POST['super_token'] == $_SESSION['super_token']){
+         switch ($_POST['action']) {
+
         case 'access':
             $authcontroller = new AuthController();
             $authcontroller->login($_POST["email"], $_POST["pwd"]);
@@ -24,6 +28,9 @@ if (isset($_POST["action"]) && isset($_POST["email"])) {
             $authcontroller->recovery($_POST["email"]);
             break;
     }
+    }
+    
+   
 }
 
 

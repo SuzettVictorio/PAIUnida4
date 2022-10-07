@@ -1,11 +1,13 @@
-<?php include 'public/templates/head.template.php'?>
+<?php 
+include 'public/templates/head.template.php'?>
+<?php include 'app/config.php';?>
 
 <body>
     <div class="container">
         <section class="cont">
             <div class="row cont justify-content-md-center aling align-items-center">
                 <div class="col-md-6 col-sm-12 justify-content-md-center aling align-items-center">
-                    <form method="post" action="app/AuthController.php">
+                    <form method="post" action="auth">
                         <h1 class="text-center">
                             Iniciar Sesión
                         </h1>
@@ -31,6 +33,7 @@
                         <div class="d-grid gap-2 col-3 mx-auto">
                             <button type="submit" class="btn btn-primary">Continuar</button>
                             <input type="hidden" name="action" value="access">
+                            <input type="hidden" name="super token" value="<? $SESSION['super_token'] ?>">
                         </div>
                     </form>
                     <div class="row " style="width: 100%;">
