@@ -3,7 +3,6 @@ include_once "config.php";
     Class CategoryController{
         public function getCategories(){
             $curl = curl_init();
-
             curl_setopt_array($curl, array(
             CURLOPT_URL => 'https://crud.jonathansoto.mx/api/categories',
             CURLOPT_RETURNTRANSFER => true,

@@ -1,7 +1,6 @@
 <?php
 include_once "config.php";
 
-
 if (isset($_POST['action']) && isset($_POST['email'])) {
     
     if(isset($_POST['super_token']) && $_POST['super_token'] == $_SESSION['super_token']){
