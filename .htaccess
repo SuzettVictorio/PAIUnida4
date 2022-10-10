@@ -1,0 +1,10 @@
+Options +FollowSymLinks -MultiViews
+
+RewriteEngine on
+#rules
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RewriteRule auth http://localhost/PaiUnidad4/app/AuthController.php
+RewriteRule ress http://localhost/PaiUnidad4/app/AuthController.php
+ErrorDocument 404 http://localhost/PaiUnidad4/public/view/notFound.php    

@@ -1,51 +1,43 @@
-<?php 
-include 'app/config.php';
-include 'app/AuthController.php';
+<?php
+include '../../app/config.php';
+include '../../app/AuthController.php';
 $user = new AuthController; 
     
 if(!$user->isLogin()){
     header("Location:".BASE_PATH."public/view/productos");
 }
+include '../templates/head.template.php'?>
 
-include 'public/templates/head.template.php'?>
-<?php ?>
 <body>
     <div class="container">
         <section class="cont">
             <div class="row cont justify-content-md-center aling align-items-center">
                 <div class="col-md-6 col-sm-12 justify-content-md-center aling align-items-center">
-                    <form method="post" action="<?= BASE_PATH?>auth">
+                    <form method="post" action="<?= BASE_PATH?>ress" enctype="multipart/form-data">
                         <h1 class="text-center">
-                            Iniciar Sesión
+                            Ingresa tu correo electrónico:
                         </h1>
-
                         <div class="row mb-3">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon1">@</span>
-                                <input type="text" name="email" class="form-control" placeholder="Usuario" required>
+                                <input type="email" name="email" class="form-control" placeholder="Correo" required>
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1">@</span>
-                                <input type="password" name="pwd" class="form-control" placeholder="******" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-check form-switch">
-                           
+                            <P>
+                                <I>
+                                    Correo para recuperación de contraseña
+                                </I>
+                            </P>
                         </div>
                         <div class="d-grid gap-2 col-3 mx-auto">
-                            <button type="submit" class="btn btn-primary">Ingresar</button>
-                            <input type="hidden" name="action" value="access">
+                            <button type="submit" class="btn btn-primary">Continuar</button>
+                            <input type="hidden" name="action" value="recovery">
                             <input type="hidden" name="super_token" value="<?php echo $_SESSION['super_token'];?>">
                         </div>
                     </form>
-                    <div class="row " style="width: 100%;">
-                        
-                    </div>
                 </div>
-                <?php include 'public/templates/footer.template.php'?>
+                <?php include '../templates/footer.template.php'?>
             </div>
         </section>
     </div>

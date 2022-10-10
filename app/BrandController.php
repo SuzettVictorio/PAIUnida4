@@ -1,8 +1,9 @@
 <?php
-include_once "config.php";
+include_once 'config.php';
     Class BrandController{
         public function getBrands(){
             $curl = curl_init();
+
             curl_setopt_array($curl, array(
             CURLOPT_URL => 'https://crud.jonathansoto.mx/api/brands',
             CURLOPT_RETURNTRANSFER => true,
